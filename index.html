@@ -1,13 +1,302 @@
-<!doctype html> <html ng-app="bonmotApp"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.03a02723.css"> <link rel="stylesheet" href="styles/main.08642f99.css"> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head> <body ngcloak> <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <md-content ng-controller="MainCtrl as menu"> <md-toolbar class="ZZmd-medium-tall"> <div class="md-toolbar-tools"> <md-button class="md-icon-button" aria-label="Settings"> <md-icon md-svg-icon="images/icons/library_music.svg"></md-icon> </md-button> <h1 class="md-display-3"> <span>Felici - Company of Singers</span> </h1> <span flex></span> <a ng-href="##events">Events </a>&nbsp;&nbsp; <a ng-href="##music">Music </a>&nbsp;&nbsp; <a ng-href="##founders">Founders </a>&nbsp;&nbsp; <a ng-href="##contacts">Contacts </a> <a ng-href="#/"> <md-button class="md-icon-button" aria-label="Home"> <md-icon md-svg-icon="images/icons/home.svg"></md-icon> </md-button> </a> </div> </md-toolbar> <br> </md-content> <!--
-    <md-content flex="100" class="md-whiteframe-1dp"> 
-      <h1 class="md-display-3">Felici</h1>
-    </md-content>
-    --> <div class="container"> <div ng-view=""></div> </div> <div class="footer"> <div class="container"> <p>Copyright 2015 (c) Zoe Jasko and Margaret Johnson</p> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.pink-green.min.css" />
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');</script> <script src="scripts/vendor.84659ebc.js"></script> <script src="scripts/scripts.c552bd8e.js"></script> </body> </html>
+<style>
+.mdl-layout__header-row {
+	background-color: rgb(173,20,87);
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+	background-color: rgb(173,20,87);
+}
+
+.felici-content.mdl-layout_content {
+    width: 950px;
+    align-self: center;
+}
+
+.mdl-card__supporting-text {
+    color: rgba(0,0,0,.80);
+}
+
+.felici-card.mdl-card {
+  background-color:#3F51B5; 
+  color:white;
+  width: 400px;
+  height: 340px;
+}
+
+.felici-card > .mdl-card__title {
+  color: white;
+}
+
+.felici-card > .mdl-card__supporting-text {
+  color: white;
+}
+
+.felici-photo-card.mdl-card {
+  width: 400px;
+  height: 340px;
+}
+
+.composer-card.mdl-card {
+  width: 256px;
+}
+
+.bio-card.mdl-card {
+  width: 400px;
+  height: 420px;
+}
+
+.wide-card.mdl-card {
+  width: 800px;
+}
+
+/*.composer-card > .mdl-card__title {
+  color: #fff;
+  height: 332px;
+}*/
+</style>
+
+<html>
+
+ <body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Felici - Company of Singers <i class="material-icons">library_music</i></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="#events">Events</a>
+        <a class="mdl-navigation__link" href="#music">Music</a>
+        <a class="mdl-navigation__link" href="#founders">Founders</a>
+        <a class="mdl-navigation__link" href="#contacts">Contacts</a>
+        <a class="mdl-navigation__link" href="#home"><i class="material-icons">home</i></a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Felici</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#events">Events</a>
+      <a class="mdl-navigation__link" href="#music">Music</a>
+      <a class="mdl-navigation__link" href="#founders">Founders</a>
+      <a class="mdl-navigation__link" href="#contacts">Contacts</a>
+      <a class="mdl-navigation__link" href="#home"><i class="material-icons">home</i> Home</a>
+    </nav>
+  </div>
+  <main class="felici-content mdl-layout__content" style="width: 950px; align-self: center;">
+    <div class="page-content"><!-- Your content goes here -->
+
+
+
+
+<div class="mdl-grid" id="home">
+  <div class="mdl-cell mdl-cell--6-col">
+	<div class="felici-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Felici
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          An experienced company of singers and musicians, bringing classical, opera and musical songs to audiences.
+        </p>
+        <p>
+          In addition to our own events, we perform charity, corporate and personal events tailored to your needs.
+        </p>
+        <p>
+         We are based in the Hertfordshire and Bedfordshire regions.
+        </p>
+	  </div>
+	</div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+	<div class="felici-photo-card mdl-card mdl-shadow--2dp">
+		  <div class="mdl-card__media">
+			<img width="400" src="images/2015-05_Singers_photo.jpg" class="mdl-card-image" alt="Singers">
+		  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Felici founders Margaret and Zoe with baritone Tim Hobman
+        </p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<hr/>
+<h3 id="music">Events</h3>
+
+  <div class="mdl-cell mdl-cell--12-col" id="contacts">
+	<div class="wide-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Upcoming Events
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          2016 January, 16 - <i>Ampthill</i> - An Evening with Mozart, in aid of the <a href="http://www.kidney.org.uk/">National Kidney Federation</a><br/>
+          2016 March, 5 - <i>Hoxne, Suffolk</i> - Phantom of the Paris Opera House<br/>
+          2016 April, 23 - <i>Malvern</i> - Charity Concert<br/>
+          2016 May, 7 - <i>Pirton, Herts</i> - Phantom of the Paris Opera House<br/>
+          2016 September - <i>Welwyn Garden City</i> - An evening of Faure <!--é--><br/>
+          2017 Summer - The Marriage of Figaro, Mozart
+        </p>
+	  </div>
+	</div>
+  </div>
+  <div class="mdl-cell mdl-cell--12-col" id="contacts">
+	<div class="wide-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Past Events
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          2015 May - <i>Welwyn Garden City</i> - An Enchanted Evening of Song <br/>
+          2015 March - <i>Harpenden</i> - Corporate club dinner
+        </p>
+	  </div>
+	</div>
+  </div>
+
+<hr/>
+<h3 id="music">Our musical range</h3>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+	<div class="composer-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__media">
+		<img src="images/Croce-Mozart-Detail.jpg" class="mdl-card-image" alt="Mozart">
+	  </div>
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Mozart
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Opera and classical songs. Mozart and Rossini to Faure and Lieder.
+        </p>
+	  </div>
+	</div>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+	<div class="composer-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__media">
+		<img src="images/Sir_Arthur_Seymour_Sullivan.jpg" class="mdl-card-image" alt="Sullivan">
+	  </div>
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Sullivan (G&amp;S)
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Operetta and Victorian and Edwardian music hall.
+        </p>
+	  </div>
+	</div>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col">
+	<div class="composer-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__media">
+		<img src="images/Ivor_Novello_mug.jpg" class="mdl-card-image" alt="Novello">
+	  </div>
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Ivor Novello
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Twentieth century songs from Novello, Sondheim and many others.
+        </p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+  <h3 id="founders">Our founders</h3>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+	<div class="bio-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Margaret Johnson (Founder)
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Margaret trained at the Royal College of Music. She has worked
+  as music teacher, primary headteacher and is currently a lay 
+  minister in the Benefice of Holwell, Ickleford and Pirton. She 
+  has been involved with local choirs and musical societies in 
+  North Herts, both as accompanist and conductor, for more years 
+  than she cares to count! More recently Margaret has been MD 
+  for a number of shows for Putteridge Bury G&amp;S Society, 
+  including their current production, Princess Ida. A 
+  founder member of Pirton Players, Margaret has also led many 
+  of their musical productions, most recently Guys and Dolls. 
+  Margaret especially enjoys working as accompanist and 
+  repetiteur.
+        </p>
+	  </div>
+	</div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+	<div class="bio-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			Zoe Jasko (Founder)
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          Zoe is an experienced soprano performing stage roles and at concert bookings. In theatre, she has played, amongst others, such lovely parts as Mabel in "Pirates of Penzance", Baker's Wife in "Into the Woods" and Tzietel in "Fiddler on the Roof". In concert, she has supported the Welwyn Garden City Male Voice choir as their guest soloist and performed in the Welwyn Garden City Friends Meeting House series of concerts. She has also sung at weddings, funerals and corporate events. Zoe has been on the production commitee for many stage performances at theatres and other venues in Hertfordshire and Devon.
+        </p>
+	  </div>
+	</div>
+  </div>
+	
+  <div class="mdl-cell mdl-cell--12-col" id="contacts">
+	<div class="wide-card mdl-card mdl-shadow--2dp">
+	  <div class="mdl-card__title">
+		  <div class="mdl-card__title-text">
+			<i class="material-icons">email</i>Contact Us
+		  </div>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+        <p>
+          For bookings, email us at <a href="mailto:bookings@felici.company?Subject=Booking%20Enquiry">bookings@felici.company</a> <br/>
+       For general enquiries, email our Musical Director at <a href="mailto:md@felici.company?Subject=Enquiry">md@felici.company</a> 
+        </p>
+	  </div>
+	</div>
+  </div>
+</div>
+<hr/>
+    <div class="footer">
+      <div class="container">
+        <p>Copyright 2015 - 2016 (c) Zoe Jasko and Margaret Johnson</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+</div>
+
+
+ </body>
+</html>
